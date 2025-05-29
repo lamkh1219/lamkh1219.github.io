@@ -39,7 +39,7 @@
         }
         .gradient-text {
             background: linear-gradient(to right, #FF6B6B, #118AB2);
-            -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .section-card {
@@ -263,8 +263,8 @@
             <h2 class="text-3xl font-semibold mb-6 text-center text-white">五動理論 AI 助手 ✨</h2>
             <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg">
                 <label for="teachingScenario" class="block text-lg font-medium text-gray-700 mb-2">請輸入您的教學情境或主題：</label>
-                <textarea id="userInput" rows="1.5" class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#118AB2] focus:border-[#118AB2] text-gray-700" placeholder="例如：國中二年級的「空氣污染」單元，或「如何向小學生解釋光合作用」"></textarea>
-
+                <textarea id="userInput" rows="3" class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#118AB2] focus:border-[#118AB2] text-gray-700" placeholder="例如：二年級「空氣污染」單元，或「如何向小學生解釋光合作用」"></textarea>
+                <input id="userInputtoken" type="password" rows="1" class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#118AB2] focus:border-[#118AB2] text-gray-700" placeholder="Openrouter API Key"></textarea>
                 <div class="mt-6 flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
                     <button class="gemini-button w-full sm:w-auto flex-1" onclick="sendMessageA()">✨ 獲取創新教學活動建議</button>
                     <button class="gemini-button w-full sm:w-auto flex-1" onclick="sendMessageB()">✨ 分析 MOVES 理論應用</button>
@@ -405,12 +405,13 @@
         // AI Integration
         async function sendMessageA(){
 				const input = document.getElementById('userInput').value;
+                const userInputtoken = document.getElementById('userInputtoken').value;
 				const responseDiv = document.getElementById('response');
 				if (!input) {
 					responseDiv.innerHTML = 'Please enter a message.';
 					return;
 				}
-				const prompt = `你是一位教學設計專家，熟悉「五動理論」(MOVES)。針對以下教學情境或主題：「${input}」，請根據五動理論的「動機 (Motivate)」、「動手 (Operate)」、「動腦 (Validate)」、「動情 (Empathize)」、「動員 (Share)」五個向度，為每個向度分別提供一個具體、創新的教學活動建議。請確保建議具有可操作性，並能激發學生深度學習。請用繁體中文回答。`;
+                const prompt = `你是一位教學設計專家，熟悉「五動理論」(MOVES)。針對以下教學情境或主題：「${input}」，請根據五動理論的「動機 (Motivate)」、「動手 (Operate)」、「動腦 (Validate)」、「動情 (Empathize)」、「動員 (Share)」五個向度，為每個向度分別提供一個具體、創新的教學活動建議。請確保建議具有可操作性，並能激發學生深度學習。請用繁體中文回答。`;
 				responseDiv.innerHTML = 'Loading...';
 				try {
 					const response = await fetch(
@@ -418,8 +419,8 @@
 						{
 							method: 'POST',
 							headers: {
-								Authorization: 'Bearer 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',
-								'HTTP-Referer': 'https://lamkh1219.github.io/',
+								Authorization: `Bearer ${userInputtoken}` ,
+								'HTTP-Referer': 'https://moves.tpompspc.edu.hk',
 								//'X-Title': 'LamKH',
 								'Content-Type': 'application/json',
 							},
@@ -442,11 +443,13 @@
 
 			async function sendMessageB(){
 				const input = document.getElementById('userInput').value;
+                const userInputtoken = document.getElementById('userInputtoken').value;
 				const responseDiv = document.getElementById('response');
 				if (!input) {
 					responseDiv.innerHTML = 'Please enter a message.';
 					return;
 				}
+                const realtoken = `Bearer ${userInputtoken}`;
 				const prompt = `你是一位教育理論專家，精通「五動理論」(MOVES)。針對以下教學情境或主題：「${input}」，請詳細分析如何將五動理論的「動機 (Motivate)」、「動手 (Operate)」、「動腦 (Validate)」、「動情 (Empathize)」、「動員 (Share)」五個核心原則應用於此情境中，以促進學生的深度學習與全人發展。請為每個原則提供具體的應用方式和預期效果。請用繁體中文回答。`;
 				responseDiv.innerHTML = 'Loading...';
 				try {
@@ -455,8 +458,8 @@
 						{
 							method: 'POST',
 							headers: {
-								Authorization: 'Bearer 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',
-								'HTTP-Referer': 'https://lamkh1219.github.io/',
+								Authorization: `Bearer ${userInputtoken}` ,
+								'HTTP-Referer': 'https://moves.tpompspc.edu.hk',
 								//'X-Title': 'LamKH',
 								'Content-Type': 'application/json',
 							},
