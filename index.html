@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Projects</title>
+    <title>GitHub Projects Showcase</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -97,6 +97,7 @@
             margin-bottom: 20px;
             font-size: 1.1rem;
             color: #eee;
+            line-height: 1.8;
         }
         
         .project-link {
@@ -119,20 +120,6 @@
         
         .project-link i {
             margin-left: 8px;
-        }
-        
-        .qr-preview {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 20px 0;
-            display: inline-block;
-        }
-        
-        .qr-preview img {
-            width: 150px;
-            height: 150px;
-            display: block;
         }
         
         .footer {
@@ -179,7 +166,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>My GitHub Projects</h1>
+            <h1>GitHub Projects Showcase</h1>
             <p>Explore my open-source projects and web applications</p>
         </header>
         
@@ -193,8 +180,6 @@
                         A responsive web application that generates QR codes from text, URLs, or other content. 
                         The generator allows customization of QR code colors and supports downloading the generated QR code as an image.
                     </p>
-                    
-                    
                     
                     <a href="https://lamkh1219.github.io/qr_code_generator" target="_blank" class="project-link">
                         Visit Project <i class="fas fa-external-link-alt"></i>
@@ -222,8 +207,21 @@
         
         <div class="footer">
             <p>Check out my <a href="https://github.com/lamkh1219" target="_blank" class="github-link">GitHub Profile</a> for more projects and source code</p>
-            <p>&copy; 2023 My Projects Showcase</p>
+            <p>&copy; 2023 Projects Showcase | Created with LamKH</p>
         </div>
     </div>
+    
+    <script>
+        // Simple animation for project cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.project-card');
+            
+            cards.forEach((card, index) => {
+                // Apply staggered animation
+                card.style.animation = `fadeIn 0.5s ease-out ${index * 0.2}s forwards`;
+                card.style.opacity = 0;
+            });
+        });
+    </script>
 </body>
 </html>
