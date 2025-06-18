@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #001510);
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            animation: fadeIn 1s ease-out;
+        }
+        
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .project-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 550px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+        
+        .project-header {
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .project-header h2 {
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .project-header h2 i {
+            color: #4ecca3;
+        }
+        
+        .project-content {
+            padding: 25px;
+        }
+        
+        .project-description {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #eee;
+        }
+        
+        .project-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #4ecca3, #1eae98);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .project-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #1eae98, #4ecca3);
+        }
+        
+        .project-link i {
+            margin-left: 8px;
+        }
+        
+        .qr-preview {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            display: inline-block;
+        }
+        
+        .qr-preview img {
+            width: 150px;
+            height: 150px;
+            display: block;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .github-link {
+            color: #4ecca3;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .github-link:hover {
+            text-decoration: underline;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .project-card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My GitHub Projects</h1>
+            <p>Explore my open-source projects and web applications</p>
+        </header>
+        
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-header">
+                    <h2><i class="fas fa-qrcode"></i> QR Code Generator</h2>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">
+                        A responsive web application that generates QR codes from text, URLs, or other content. 
+                        The generator allows customization of QR code colors and supports downloading the generated QR code as an image.
+                    </p>
+                    
+                    <div class="qr-preview">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lamkh1219.github.io/qr_code_generator" alt="QR Code Preview">
+                    </div>
+                    
+                    <a href="https://lamkh1219.github.io/qr_code_generator" target="_blank" class="project-link">
+                        Visit Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <h2><i class="fas fa-chalkboard-teacher"></i> MOVES Teaching Assistant</h2>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">
+                        An AI-powered platform that helps teachers create effective lesson plans using the MOVES teaching theory framework. 
+                        This tool provides structured guidance for developing engaging learning experiences with clear objectives, 
+                        varied activities, and assessment strategies.
+                    </p>
+                    
+                    <a href="https://lamkh1219.github.io/moves" target="_blank" class="project-link">
+                        Visit Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Check out my <a href="https://github.com/lamkh1219" target="_blank" class="github-link">GitHub Profile</a> for more projects and source code</p>
+            <p>&copy; 2023 My Projects Showcase</p>
+        </div>
+    </div>
+</body>
+</html>
