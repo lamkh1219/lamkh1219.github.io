@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="zh-Hant"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Projects Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>GitHub 開源專案作品集</title> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* CSS 樣式維持不變，以確保視覺效果一致 */
         * {
             margin: 0;
             padding: 0;
@@ -116,13 +115,21 @@
         
         .projects-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            /* 為了容納三張卡片，將 minmax 寬度稍微調整，以便在寬螢幕上能排列整齊 */
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
             gap: 40px;
             margin-top: 40px;
             position: relative;
             z-index: 2;
         }
         
+        @media (max-width: 1200px) {
+            /* 在中等螢幕下，維持兩列或一列，但讓卡片寬度更有彈性 */
+            .projects-container {
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+            }
+        }
+
         @media (max-width: 600px) {
             .projects-container {
                 grid-template-columns: 1fr;
@@ -177,6 +184,12 @@
             box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
         }
         
+        /* 第三張卡片 (QR Code Reader) 樣式 - 圖標 */
+        .project-card:nth-child(3) .project-icon {
+            background: linear-gradient(135deg, #10b981, #059669); /* 綠色調 */
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+        }
+
         .project-icon i {
             font-size: 36px;
             color: white;
@@ -204,6 +217,11 @@
         
         .project-card:nth-child(2) .card-header h2::after {
             background: linear-gradient(45deg, #8b5cf6, #7c3aed);
+        }
+
+        /* 第三張卡片 (QR Code Reader) 樣式 - 標題底線 */
+        .project-card:nth-child(3) .card-header h2::after {
+            background: linear-gradient(45deg, #10b981, #059669);
         }
         
         .project-description {
@@ -237,6 +255,12 @@
             background: linear-gradient(45deg, #8b5cf6, #7c3aed);
             box-shadow: 0 6px 20px rgba(139, 92, 246, 0.25);
         }
+
+        /* 第三張卡片 (QR Code Reader) 樣式 - 連結按鈕 */
+        .project-card:nth-child(3) .project-link {
+            background: linear-gradient(45deg, #10b981, #059669);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.25);
+        }
         
         .project-link:hover {
             transform: translateY(-4px);
@@ -247,6 +271,11 @@
             box-shadow: 0 12px 25px rgba(139, 92, 246, 0.35);
         }
         
+        /* 第三張卡片 (QR Code Reader) 樣式 - 連結按鈕 Hover */
+        .project-card:nth-child(3) .project-link:hover {
+            box-shadow: 0 12px 25px rgba(16, 185, 129, 0.35);
+        }
+
         .project-link::before {
             content: '';
             position: absolute;
@@ -297,6 +326,12 @@
         .project-card:nth-child(2) .tech-tag {
             background: #f5d0fe;
             color: #c026d3;
+        }
+
+        /* 第三張卡片 (QR Code Reader) 樣式 - 技術標籤 */
+        .project-card:nth-child(3) .tech-tag {
+            background: #d1fae5; /* 淺綠色 */
+            color: #065f46; /* 深綠色 */
         }
         
         .footer {
@@ -392,9 +427,7 @@
     <div class="container">
         <header>
             <div class="header-content">
-                <h1>Project Portfolio</h1>
-                <p>Explore my open-source projects and innovative web applications. Each project is crafted with attention to detail and user experience.</p>
-            </div>
+                <h1>Project Portfolio</h1> <p>探索我的開源專案與創新的網頁應用程式。每個作品皆用心打造，並注重細節與使用者體驗。</p> </div>
         </header>
         
         <div class="projects-container">
@@ -403,11 +436,10 @@
                     <div class="project-icon">
                         <i class="fas fa-qrcode"></i>
                     </div>
-                    <h2>QR Code Generator</h2>
-                    <p class="project-description">
-                        A responsive web application that generates QR codes from text, URLs, or other content. 
-                        The generator allows customization of QR code colors and supports downloading the generated QR code as an image.
-                        Perfect for sharing contact information, websites, or Wi-Fi credentials.
+                    <h2>QR Code 生成器</h2> <p class="project-description">
+                        這是一個響應式網頁應用程式，能夠從文字、網址或任何內容生成 QR Code。
+                        生成器支援自訂 QR Code 顏色，並提供將生成的 QR Code 下載為圖片的功能。
+                        是分享聯絡資訊、網站或 Wi-Fi 憑證的完美工具。
                     </p>
                 </div>
                 <div class="card-content">
@@ -416,10 +448,10 @@
                         <span class="tech-tag">HTML5</span>
                         <span class="tech-tag">CSS3</span>
                         <span class="tech-tag">QRCode.js</span>
-                        <span class="tech-tag">Responsive Design</span>
+                        <span class="tech-tag">響應式設計</span>
                     </div>
                     <a href="https://lamkh1219.github.io/qr_code_generator" target="_blank" class="project-link">
-                        View Project <i class="fas fa-external-link-alt"></i>
+                        檢視專案演示 <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
             </div>
@@ -429,37 +461,61 @@
                     <div class="project-icon">
                         <i class="fas fa-chalkboard-teacher"></i>
                     </div>
-                    <h2>MOVES Teaching Assistant</h2>
-                    <p class="project-description">
-                        An AI-powered platform that helps teachers create effective lesson plans using the MOVES teaching theory framework. 
-                        This tool provides structured guidance for developing engaging learning experiences, saving educators hours of preparation time.
+                    <h2>MOVES 教學助手</h2> <p class="project-description">
+                        這是一個 AI 驅動的教學平台，旨在協助教師根據 MOVES 教學理論框架，創建高效的課程規劃。
+                        此工具為開發引人入勝的學習體驗提供結構化指導，能為教育工作者節省大量備課時間。
                     </p>
                 </div>
                 <div class="card-content">
                     <div class="tech-stack">
-                        <span class="tech-tag">AI Integration</span>
-                        <span class="tech-tag">Education Tech</span>
+                        <span class="tech-tag">AI 整合</span>
+                        <span class="tech-tag">教育科技</span>
                         <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Teaching Tools</span>
-                        <span class="tech-tag">User Experience</span>
+                        <span class="tech-tag">教學工具</span>
+                        <span class="tech-tag">使用者體驗 (UX)</span>
                     </div>
                     <a href="https://lamkh1219.github.io/moves" target="_blank" class="project-link">
-                        View Project <i class="fas fa-external-link-alt"></i>
+                        檢視專案演示 <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
             </div>
-        </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <div class="project-icon">
+                        <i class="fas fa-camera"></i> 
+                    </div>
+                    <h2>QR Code 掃描解碼器</h2> <p class="project-description">
+                        這是一個基於網路瀏覽器的工具，用於即時掃描和解碼 QR Code。
+                        它能夠利用你的網路攝影機或上傳的圖像來讀取 QR Code 內容，
+                        並快速顯示解碼後的文字或連結。
+                    </p>
+                </div>
+                <div class="card-content">
+                    <div class="tech-stack">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Web API</span>  
+                        <span class="tech-tag">攝影機 API</span>
+                    </div>
+                    <a href="https://lamkh1219.github.io/qr_code_reader/" target="_blank" class="project-link">
+                        檢視專案演示 <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            </div>
         
         <div class="footer">
             <a href="https://github.com/lamkh1219" target="_blank" class="github-link">
-                <i class="fab fa-github"></i> Explore more on GitHub
+                <i class="fab fa-github"></i> 前往 GitHub 探索更多專案
             </a>
-            <p class="copyright">&copy; 2025 Project Portfolio | Crafted with passion and attention to detail</p>
+            <p class="copyright">&copy; 2025 專案作品集 | 用熱情與細節精心打造</p>
         </div>
     </div>
     
     <script>
-        // Enhanced animations
+        // JavaScript 動畫保持不變
         document.addEventListener('DOMContentLoaded', function() {
             const cards = document.querySelectorAll('.project-card');
             
