@@ -1,3 +1,3 @@
 # lamkh1219.github.io
 All Of My Repository</br>
-https://lamkh1219.github.io/
+<a href="https://lamkh1219.github.io/" target="_blank">https://lamkh1219.github.io/</a>
