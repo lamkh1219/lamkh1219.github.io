@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en"> <head>
+<html lang="en"> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Projects Portfolio</title> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>GitHub Projects Portfolio</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -181,10 +183,10 @@
             box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
         }
         
-        /* 第三張卡片 (QR Code Reader) 樣式 - 圖標 */
+        /* 第三張卡片 (ACS Project Manager) 樣式 - 圖標 */
         .project-card:nth-child(3) .project-icon {
-            background: linear-gradient(135deg, #10b981, #059669); /* 綠色調 */
-            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+            background: linear-gradient(135deg, #facc15, #f97316); /* 橙色調 */
+            box-shadow: 0 10px 25px rgba(250, 204, 21, 0.3);
         }
 
         .project-icon i {
@@ -216,9 +218,9 @@
             background: linear-gradient(45deg, #8b5cf6, #7c3aed);
         }
 
-        /* 第三張卡片 (QR Code Reader) 樣式 - 標題底線 */
+        /* 第三張卡片 (ACS Project Manager) 樣式 - 標題底線 */
         .project-card:nth-child(3) .card-header h2::after {
-            background: linear-gradient(45deg, #10b981, #059669);
+            background: linear-gradient(45deg, #facc15, #f97316);
         }
         
         .project-description {
@@ -253,10 +255,10 @@
             box-shadow: 0 6px 20px rgba(139, 92, 246, 0.25);
         }
 
-        /* 第三張卡片 (QR Code Reader) 樣式 - 連結按鈕 */
+        /* 第三張卡片 (ACS Project Manager) 樣式 - 連結按鈕 */
         .project-card:nth-child(3) .project-link {
-            background: linear-gradient(45deg, #10b981, #059669);
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.25);
+            background: linear-gradient(45deg, #facc15, #f97316);
+            box-shadow: 0 6px 20px rgba(250, 204, 21, 0.25);
         }
         
         .project-link:hover {
@@ -268,9 +270,9 @@
             box-shadow: 0 12px 25px rgba(139, 92, 246, 0.35);
         }
         
-        /* 第三張卡片 (QR Code Reader) 樣式 - 連結按鈕 Hover */
+        /* 第三張卡片 (ACS Project Manager) 樣式 - 連結按鈕 Hover */
         .project-card:nth-child(3) .project-link:hover {
-            box-shadow: 0 12px 25px rgba(16, 185, 129, 0.35);
+            box-shadow: 0 12px 25px rgba(250, 204, 21, 0.35);
         }
 
         .project-link::before {
@@ -325,10 +327,10 @@
             color: #c026d3;
         }
 
-        /* 第三張卡片 (QR Code Reader) 樣式 - 技術標籤 */
+        /* 第三張卡片 (ACS Project Manager) 樣式 - 技術標籤 */
         .project-card:nth-child(3) .tech-tag {
-            background: #d1fae5; /* 淺綠色 */
-            color: #065f46; /* 深綠色 */
+            background: #fef9c3; /* 淺黃色 */
+            color: #a16207; /* 深黃色 */
         }
         
         .footer {
@@ -415,7 +417,7 @@
             pointer-events: none;
         }
 
-        /* --- 語言切換按鈕樣式 (新增) --- */
+        /* --- 語言切換按鈕樣式 --- */
         .lang-toggle-btn {
             background: #ffffff;
             color: #4f46e5;
@@ -447,6 +449,7 @@
             <div class="header-content">
                 <h1 data-key="header-h1">Project Portfolio</h1>
                 <p data-key="header-p">Explore my open-source projects and innovative web applications. Each project is crafted with attention to detail and user experience.</p>
+
                 <button id="lang-toggle" class="lang-toggle-btn" data-key="lang-toggle-btn">切換為中文</button>
             </div>
         </header>
@@ -503,22 +506,22 @@
             <div class="project-card">
                 <div class="card-header">
                     <div class="project-icon">
-                        <i class="fas fa-camera"></i> 
+                        <i class="fas fa-project-diagram"></i> 
                     </div>
-                    <h2 data-key="proj3-h2">QR Code Reader</h2> 
+                    <h2 data-key="proj3-h2">ACS Project Manager</h2> 
                     <p class="project-description" data-key="proj3-p">
-                        This is a web-based tool for instantly scanning and decoding QR Codes. It can utilize your webcam or uploaded images to read QR Code content and quickly display the decoded text or link.
+                        A comprehensive, web-based project management tool designed for agile teams. It features task tracking, collaborative boards, and progress visualization, helping teams streamline workflows and achieve their project goals efficiently.
                     </p>
                 </div>
                 <div class="card-content">
                     <div class="tech-stack">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">Web API</span>  
-                        <span class="tech-tag" data-key="tag-camera-api">Camera API</span>
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>  
+                        <span class="tech-tag" data-key="tag-project-management">Project Management</span>
+                        <span class="tech-tag" data-key="tag-agile">Agile Development</span>
                     </div>
-                    <a href="https://lamkh1219.github.io/qr_code_reader/" target="_blank" class="project-link" data-key="link-view-project">
+                    <a href="https://lamkh1219.github.io/ACS/" target="_blank" class="project-link" data-key="link-view-project">
                         View Project Demo <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
@@ -534,7 +537,7 @@
     </div>
     
     <script>
-        // 翻譯資料物件
+        // 翻譯資料物件 (已更新 ACS 專案的翻譯鍵值)
         const translations = {
             'header-h1': {
                 'zh-Hant': 'Project Portfolio',
@@ -548,7 +551,7 @@
                 'zh-Hant': 'Switch to English',
                 'en': '切換為中文' // 切換為中文時，按鈕顯示中文
             },
-            // --- 專案 1 ---
+            // --- 專案 1 (QR Code Generator) ---
             'proj1-h2': {
                 'zh-Hant': 'QR Code 生成器',
                 'en': 'QR Code Generator'
@@ -561,7 +564,7 @@
                 'zh-Hant': '響應式設計',
                 'en': 'Responsive Design'
             },
-            // --- 專案 2 ---
+            // --- 專案 2 (MOVES Teaching Assistant) ---
             'proj2-h2': {
                 'zh-Hant': 'MOVES 教學助手',
                 'en': 'MOVES Teaching Assistant'
@@ -586,18 +589,22 @@
                 'zh-Hant': '使用者體驗 (UX)',
                 'en': 'User Experience (UX)'
             },
-            // --- 專案 3 ---
+            // --- 專案 3 (ACS Project Manager - 新增) ---
             'proj3-h2': {
-                'zh-Hant': 'QR Code 掃描解碼器',
-                'en': 'QR Code Reader'
+                'zh-Hant': 'ACS 專案管理工具',
+                'en': 'ACS Project Manager'
             },
             'proj3-p': {
-                'zh-Hant': '這是一個基於網路瀏覽器的工具，用於即時掃描和解碼 QR Code。它能夠利用你的網路攝影機或上傳的圖像來讀取 QR Code 內容，並快速顯示解碼後的文字或連結。',
-                'en': 'This is a web-based tool for instantly scanning and decoding QR Codes. It can utilize your webcam or uploaded images to read QR Code content and quickly display the decoded text or link.'
+                'zh-Hant': '一個為敏捷團隊設計的綜合性網頁專案管理工具。它具有任務追蹤、協作看板和進度視覺化功能，協助團隊簡化工作流程並有效地實現專案目標。',
+                'en': 'A comprehensive, web-based project management tool designed for agile teams. It features task tracking, collaborative boards, and progress visualization, helping teams streamline workflows and achieve their project goals efficiently.'
             },
-            'tag-camera-api': {
-                'zh-Hant': '攝影機 API',
-                'en': 'Camera API'
+            'tag-project-management': {
+                'zh-Hant': '專案管理',
+                'en': 'Project Management'
+            },
+            'tag-agile': {
+                'zh-Hant': '敏捷開發',
+                'en': 'Agile Development'
             },
             // --- 底部/通用 ---
             'link-view-project': {
@@ -614,7 +621,7 @@
             }
         };
 
-        // *** 修改點 1: 設置預設語言為英文 (en) ***
+        // 設置預設語言為英文 (en)
         let currentLang = 'en';
 
         // 翻譯函式
@@ -651,7 +658,7 @@
         // --- DOMContentLoaded 事件處理器 ---
         document.addEventListener('DOMContentLoaded', function() {
             
-            // *** 修改點 2: 確保頁面內容在載入時是英文 (en) ***
+            // 確保頁面內容在載入時是英文 (en)
             translatePage('en'); 
 
             // 綁定按鈕事件
@@ -660,7 +667,7 @@
                 toggleButton.addEventListener('click', toggleLanguage);
             }
 
-            // *** 修改點 3: 確保初始狀態按鈕文字正確顯示「切換為中文」***
+            // 確保初始狀態按鈕文字正確顯示「切換為中文」
             if (toggleButton && currentLang === 'en') {
                  toggleButton.innerHTML = translations['lang-toggle-btn']['en'];
             }
