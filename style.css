@@ -116,7 +116,7 @@ header p {
 
 @media (max-width: 1200px) {
     .projects-container {
-        /* 讓 4 個專案在寬螢幕下保持一行 3 個 */
+        /* 讓 5 個專案在寬螢幕下保持一行 3 個 */
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     }
 }
@@ -180,10 +180,15 @@ header p {
     box-shadow: 0 10px 25px rgba(250, 204, 21, 0.3);
 }
 
-/* 第四張卡片 (GitHub Pages Deploy Instructions) 樣式 - 圖標 */
 .project-card:nth-child(4) .project-icon {
-    background: linear-gradient(135deg, #34d399, #059669); /* 綠色調 */
+    background: linear-gradient(135deg, #34d399, #059669); /* GitHub Pages Deploy Instructions 綠色調 */
     box-shadow: 0 10px 25px rgba(52, 211, 153, 0.3);
+}
+
+/* 第五張卡片 (Course Inquiry System) 樣式 - 圖標 */
+.project-card:nth-child(5) .project-icon {
+    background: linear-gradient(135deg, #ef4444, #dc2626); /* 紅色調 */
+    box-shadow: 0 10px 25px rgba(239, 68, 68, 0.3);
 }
 
 .project-icon i {
@@ -219,9 +224,13 @@ header p {
     background: linear-gradient(45deg, #facc15, #f97316);
 }
 
-/* 第四張卡片 (GitHub Pages Deploy Instructions) 樣式 - 標題底線 */
 .project-card:nth-child(4) .card-header h2::after {
     background: linear-gradient(45deg, #34d399, #059669);
+}
+
+/* 第五張卡片 (Course Inquiry System) 樣式 - 標題底線 */
+.project-card:nth-child(5) .card-header h2::after {
+    background: linear-gradient(45deg, #ef4444, #dc2626);
 }
 
 .project-description {
@@ -261,10 +270,15 @@ header p {
     box-shadow: 0 6px 20px rgba(250, 204, 21, 0.25);
 }
 
-/* 第四張卡片 (GitHub Pages Deploy Instructions) 樣式 - 連結按鈕 */
 .project-card:nth-child(4) .project-link {
     background: linear-gradient(45deg, #34d399, #059669);
     box-shadow: 0 6px 20px rgba(52, 211, 153, 0.25);
+}
+
+/* 第五張卡片 (Course Inquiry System) 樣式 - 連結按鈕 */
+.project-card:nth-child(5) .project-link {
+    background: linear-gradient(45deg, #ef4444, #dc2626);
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.25);
 }
 
 .project-link:hover {
@@ -280,9 +294,13 @@ header p {
     box-shadow: 0 12px 25px rgba(250, 204, 21, 0.35);
 }
 
-/* 第四張卡片 (GitHub Pages Deploy Instructions) 樣式 - 連結按鈕 Hover */
 .project-card:nth-child(4) .project-link:hover {
     box-shadow: 0 12px 25px rgba(52, 211, 153, 0.35);
+}
+
+/* 第五張卡片 (Course Inquiry System) 樣式 - 連結按鈕 Hover */
+.project-card:nth-child(5) .project-link:hover {
+    box-shadow: 0 12px 25px rgba(239, 68, 68, 0.35);
 }
 
 .project-link::before {
@@ -342,10 +360,15 @@ header p {
     color: #a16207; 
 }
 
-/* 第四張卡片 (GitHub Pages Deploy Instructions) 樣式 - 技術標籤 */
 .project-card:nth-child(4) .tech-tag {
     background: #d1fae5; 
     color: #065f46; 
+}
+
+/* 第五張卡片 (Course Inquiry System) 樣式 - 技術標籤 */
+.project-card:nth-child(5) .tech-tag {
+    background: #fee2e2; 
+    color: #991b1b; 
 }
 
 .footer {
