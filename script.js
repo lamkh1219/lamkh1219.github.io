@@ -1,4 +1,4 @@
-// 翻譯資料物件 (已新增 proj4 相關的翻譯鍵值)
+// 翻譯資料物件
 const translations = {
     'header-h1': {
         'zh-Hant': 'Project Portfolio',
@@ -67,7 +67,7 @@ const translations = {
         'zh-Hant': '敏捷開發',
         'en': 'Agile Development'
     },
-    // --- 專案 4 (GitHub Pages Deploy Instructions - 新增) ---
+    // --- 專案 4 (GitHub Pages Deploy Instructions) ---
     'proj4-h2': {
         'zh-Hant': 'GitHub Pages 部署指南',
         'en': 'GitHub Pages Deploy Instructions'
@@ -83,6 +83,27 @@ const translations = {
     'tag-deployment': {
         'zh-Hant': '部署技術',
         'en': 'Deployment'
+    },
+    // --- 專案 5 (Course Inquiry System) ---
+    'proj5-h2': {
+        'zh-Hant': '課程查詢系統',
+        'en': 'Course Inquiry System'
+    },
+    'proj5-p': {
+        'zh-Hant': '一個動態網頁應用程式，允許使用者透過老師的名字快速查詢當天的課堂安排。此系統對於行政人員和代課協調員至關重要，能為管理課程變動、安排代課和日常運營規劃提供高效工具。',
+        'en': 'A dynamic web application allowing users to quickly look up daily class schedules based on a teacher\'s name. This system is crucial for administrators and substitute coordinators, providing efficient tools for managing class changes, scheduling substitutions, and daily operational planning.'
+    },
+    'tag-data-retrieval': {
+        'zh-Hant': '資料檢索',
+        'en': 'Data Retrieval'
+    },
+    'tag-scheduling': {
+        'zh-Hant': '排課系統',
+        'en': 'Scheduling'
+    },
+    'tag-admin-tool': {
+        'zh-Hant': '行政工具',
+        'en': 'Admin Tool'
     },
     // --- 底部/通用 ---
     'link-view-project': {
@@ -125,10 +146,10 @@ function toggleLanguage() {
     // 更新按鈕文字
     const toggleButton = document.getElementById('lang-toggle');
     if (currentLang === 'en') {
-            // 如果當前是英文，按鈕顯示「切換為中文」
+        // 如果當前是英文，按鈕顯示「切換為中文」
         toggleButton.innerHTML = translations['lang-toggle-btn']['en'];
     } else {
-            // 如果當前是中文，按鈕顯示「Switch to English」
+        // 如果當前是中文，按鈕顯示「Switch to English」
         toggleButton.innerHTML = translations['lang-toggle-btn']['zh-Hant'];
     }
 }
@@ -147,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 確保初始狀態按鈕文字正確顯示「切換為中文」
     if (toggleButton && currentLang === 'en') {
-            toggleButton.innerHTML = translations['lang-toggle-btn']['en'];
+        toggleButton.innerHTML = translations['lang-toggle-btn']['en'];
     }
 
     // Enhanced animations 
