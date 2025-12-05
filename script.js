@@ -50,22 +50,26 @@ const translations = {
         'zh-Hant': '使用者體驗 (UX)',
         'en': 'User Experience (UX)'
     },
-    // --- 專案 3 (ACS Project Manager) ---
+    // --- 專案 3 (每日活動點名查詢系統 - 更新) ---
     'proj3-h2': {
-        'zh-Hant': 'ACS 專案管理工具',
-        'en': 'ACS Project Manager'
+        'zh-Hant': '每日活動點名查詢系統',
+        'en': 'Course Roll-Call Inquiry System'
     },
     'proj3-p': {
-        'zh-Hant': '一個為敏捷團隊設計的綜合性網頁專案管理工具。它具有任務追蹤、協作看板和進度視覺化功能，協助團隊簡化工作流程並有效地實現專案目標。',
-        'en': 'A comprehensive, web-based project management tool designed for agile teams. It features task tracking, collaborative boards, and progress visualization, helping teams streamline workflows and achieve their project goals efficiently.'
+        'zh-Hant': '這是一個專為學校設計的 **「每日活動點名查詢工具」**。使用者只需點選日期，系統會立刻顯示當天所有課後活動（如球隊、興趣班），以及每項活動的**學生名單**（包含姓名和班級）。它能幫助老師和管理員快速掌握當天所有留校學生的去向，讓點名和課務安排變得非常簡單。',
+        'en': 'This is a **Daily Activity Roll-Call System** designed for schools. Users select a date, and the system instantly shows all after-school activities (like teams and clubs) scheduled for that day, along with the **student roster** (name and class) for each activity. It helps teachers and staff quickly track all students staying late, making roll-call and scheduling much simpler.'
     },
-    'tag-project-management': {
-        'zh-Hant': '專案管理',
-        'en': 'Project Management'
+    'tag-project-management': { // 更改為新意思：課務管理
+        'zh-Hant': '課務管理',
+        'en': 'Course Management'
     },
-    'tag-agile': {
-        'zh-Hant': '敏捷開發',
-        'en': 'Agile Development'
+    'tag-agile': { // 更改為新意思：學生點名
+        'zh-Hant': '學生點名',
+        'en': 'Student Roll-Call'
+    },
+    'tag-data-processing': { // 新增一個標籤
+        'zh-Hant': '資料處理',
+        'en': 'Data Processing'
     },
     // --- 專案 4 (GitHub Pages Deploy Instructions) ---
     'proj4-h2': {
