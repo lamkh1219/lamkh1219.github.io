@@ -176,7 +176,7 @@ header p {
 }
 
 .project-card:nth-child(3) .project-icon {
-    background: linear-gradient(135deg, #facc15, #f97316); /* ACS Project Manager 橙色調 */
+    background: linear-gradient(135deg, #facc15, #f97316); /* ACS/點名查詢 橙色調 */
     box-shadow: 0 10px 25px rgba(250, 204, 21, 0.3);
 }
 
